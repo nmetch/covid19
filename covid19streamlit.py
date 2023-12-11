@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.style as style
 style.available
 import seaborn as sns
-%matplotlib inline
+
 from sklearn.linear_model import LinearRegression, BayesianRidge
 from sklearn.model_selection import RandomizedSearchCV, train_test_split
 from sklearn.preprocessing import PolynomialFeatures
