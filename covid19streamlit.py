@@ -179,7 +179,7 @@ plt.title('Hospitalisation vs Race and ethnicity (combined)')
 plt.ylabel('Race and ethnicity (combined)')
 plt.show()
 plt.figure(figsize=(12,5))
-sns.countplot(y=df['Race and ethnicity (combined)'],hue=df['
+sns.countplot(y=df['Race and ethnicity (combined)'],hue=df['death_yn'])
 plt.title('Death vs Race and ethnicity (combined)')
 plt.ylabel('Race and ethnicity (combined)')
 plt.show()
