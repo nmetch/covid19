@@ -132,8 +132,7 @@ df.head()
 df.info()
 #value count age group
 df['age_group'].value_counts()
-#Dropping all rows with 'Unknown values' as well as dropping columns that are extremely
-skewed.
+#Dropping all rows with 'Unknown values' as well as dropping columns that are extremely skewed.
 df = df[df['Race and ethnicity (combined)'] != 'Unknown']
 df = df[df.death_yn != 'Unknown']
 df = df[df['hosp_yn'] != 'Unknown']
@@ -151,7 +150,6 @@ df['Month'].value_counts()
 df.head()
 #EDA: Exploratory Data Analysis
 #plots
-
 # death vs age group
 plt.figure(figsize=(12,5))
 sns.countplot(x=df['age_group'],hue=df['death_yn'])
@@ -251,8 +249,7 @@ params = {'n_estimators':[100],
  'max_depth':[2,3,5,10,15,30,40,50],
  'max_features':[0.1,0.2,0.3,0.4,0.5],
  'criterion':["gini","entropy"]}
-grid_search = GridSearchCV(estimator=model,param_grid=params,verbose=1,n_jobs=-
-1,scoring='accuracy')
+grid_search = GridSearchCV(estimator=model,param_grid=params,verbose=1,n_jobs=-1,scoring='accuracy')
 grid_search.fit(X_train,y_train)
 #best model using best_estimator
 bestmodel = grid_search.best_estimator_
@@ -294,8 +291,7 @@ params = {'n_estimators':[100],
  'max_depth':[2,3,5,10,15,30,40,50],
  'max_features':[0.1,0.2,0.3,0.4,0.5],
  'criterion':["gini","entropy"]}
-grid_search = GridSearchCV(estimator=model,param_grid=params,verbose=1,n_jobs=-
-1,scoring='recall')
+grid_search = GridSearchCV(estimator=model,param_grid=params,verbose=1,n_jobs=-1,scoring='recall')
 grid_search.fit(X_train,y_train)
 
 #best model
@@ -331,6 +327,9 @@ filepath = os.path.join(path, filename)
 print(filepath)
 #install bandit
 pip install bandit
+
+#Security Checks from cmd window
+bandit -r C:\\Users\\nelly\\COVID-19_Case_Surveillance_Public_Use_Data.csv 
 
 
 
