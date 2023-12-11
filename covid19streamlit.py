@@ -2,7 +2,9 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
-
+import matplotlib.pyplot as plt 
+import matplotlib.style as style
+style.available 
 from sklearn.linear_model import LinearRegression, BayesianRidge
 from sklearn.model_selection import RandomizedSearchCV, train_test_split
 from sklearn.preprocessing import PolynomialFeatures
