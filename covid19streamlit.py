@@ -1,8 +1,6 @@
 #libraries
 import pandas as pd
 import numpy as np
-import matplotlib.style as style
-style.available
 import seaborn as sns
 
 from sklearn.linear_model import LinearRegression, BayesianRidge
