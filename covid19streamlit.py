@@ -279,8 +279,7 @@ auc = auc(fpr, tpr)
 plt.figure(figsize=(5,5), dpi=100)
 plt.plot(fpr, tpr, linestyle='-',label='roccurve(auc = %0.3f)'%auc)
 #features importance levels
-Feature_Importance =
-pd.DataFrame({'Feature':X_train.columns,'Importance':bestmodel.feature_importances_})
+Feature_Importance = pd.DataFrame({'Feature':X_train.columns,'Importance':bestmodel.feature_importances_})
 Feature_Importance.sort_values(by='Importance',ascending=False,inplace=True)
 Feature_Importance.set_index('Feature',inplace=True)
 Feature_Importance
@@ -301,8 +300,8 @@ y_train_pred = bestmodel.predict(X_train)
 print("Accuracy: ", accuracy_score(y_train, y_train_pred))
 print("Recall: ", recall_score(y_train, y_train_pred))
 #roc curve3 scoring model
-from sklearn.metrics import roc_curve, auc
-                  fpr, tpr, threshold = roc_curve(y_test, y_test_pred)
+from sklearn.metrics import roc_curve, auc, fpr, tpr 
+threshold = roc_curve(y_test, y_test_pred)
 auc = auc(fpr, tpr)
 plt.figure(figsize=(5,5), dpi=100)
 plt.plot(fpr, tpr, linestyle='-',label='roccurve(auc = %0.3f)'%auc)
