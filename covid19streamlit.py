@@ -324,9 +324,8 @@ path = os.getcwd()
 filename = 'COVID-19_Case_Surveillance_Public_Use_Data.csv'
 filepath = os.path.join(path, filename)
 print(filepath)
-#install bandit
-pip install bandit
 
+#install bandit
 #Security Checks from cmd window
 bandit -r C:\\Users\\nelly\\COVID-19_Case_Surveillance_Public_Use_Data.csv 
 
