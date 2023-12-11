@@ -102,8 +102,7 @@ df.head()
 #Covid19 current status
 df['current_status'].value_counts()
 #value count sex
-df['sex'] = df['sex'].apply(lam
-bda x: 'Unknown' if x == 'Missing' else x)
+df['sex'] = df['sex'].apply(lambda x: 'Unknown' if x == 'Missing' else x)
 df['sex'].value_counts()
 #value count race and ethicity
 df['Race and ethnicity (combined)'] = df['Race and ethnicity (combined)'].apply(lambda x:
