@@ -28,9 +28,6 @@ uploaded_file = st.file_uploader("COVID-19_Case_Surveillance_Public_Use_Data.csv
 #read csv
 df=pd.read_csv(uploaded_file)
 
-df = pd.read_csv('COVID-19_Case_Surveillance_Public_Use_Data.csv')
-df
-
 #Data Preprocessing
 #Shape
 #number of rows and columns
