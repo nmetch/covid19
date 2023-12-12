@@ -23,12 +23,14 @@ from plotly.subplots import make_subplots
 #Load data Read Data
 # File uploader widget
 import streamlit as st
-from pydataset import data
+
 
 uploaded_file = st.file_uploader("COVID-19_Case_Surveillance_Public_Use_Data.csv", type=["csv"])
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.write('## uploaded_file')
+    st.dataframe(df,3000,500)
 
-#read csv
-df=pd.read_csv(uploaded_file)
 
 #Data Preprocessing
 #Shape
