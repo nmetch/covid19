@@ -27,9 +27,12 @@ import streamlit as st
 
 uploaded_file = st.file_uploader("COVID-19_Case_Surveillance_Public_Use_Data.csv", type=["csv"])
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.write('## uploaded_file')
-    st.dataframe(df,3000,500)
+    try:
+        # Read the data into a DataFrame
+        df = pd.read_csv(uploaded_file)
+
+        # Display the DataFrame
+        st.dataframe(df)
 
 
 #Data Preprocessing
