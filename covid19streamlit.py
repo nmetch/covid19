@@ -21,6 +21,8 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 
 #Load data Read Data
+# File uploader widget
+uploaded_file = st.file_uploader("COVID-19_Case_Surveillance_Public_Use_Data.csv", type=["csv"])
 df = pd.read_csv('COVID-19_Case_Surveillance_Public_Use_Data.csv')
 df
 
