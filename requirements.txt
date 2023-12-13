@@ -4,6 +4,6 @@ seaborn
 streamlit==0.89.0
 matplotlib==3.4.2
 numpy
-python
+python==3.5
 pydataset
 
