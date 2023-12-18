@@ -47,4 +47,4 @@ if uploaded_file is not None:
     except Exception as e:
         st.error(f"An error occurred: {str(e)}")
 else:
-    st.info("Please upload a CSV file.")
+    st.info("COVID-19_Case_Surveillance_Public_Use_Data.csv")
